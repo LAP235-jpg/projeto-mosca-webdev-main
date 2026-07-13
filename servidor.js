@@ -27,4 +27,4 @@ fs.readFile('home.html', 'utf8', (err, html) => {
 
 //espaço DEV 0.4.5
 
-//vari
+//variveis
