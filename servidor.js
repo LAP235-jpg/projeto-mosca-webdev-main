@@ -9,10 +9,10 @@ app.use(express.json());
 // Variáveis do "banco de dados"
 let saldo = 100;
 const jogos = [
-  { id: 1, nome: 'GUA2', preco: 19.80, estoque: 10, pagina: 'gua2' },
-  { id: 2, nome: 'FIFA23', preco: 20.00, estoque: 5, pagina: 'fifa23' },
-  { id: 3, nome: 'Animal Crossing', preco: 45.90, estoque: 3, pagina: 'animal-crossing' },
-  { id: 4, nome: 'RDR2', preco: 11.10, estoque: 8, pagina: 'rdr2' }
+  { id: 1, nome: 'GUA2', preco: 19.67, estoque: 10, pagina: 'gua2' },
+  { id: 2, nome: 'FIFA23', preco: 180.90, estoque: 5, pagina: 'fifa23' },
+  { id: 3, nome: 'Animal Crossing', preco: 240.00, estoque: 3, pagina: 'animal-crossing' },
+  { id: 4, nome: 'RDR2', preco: 210.90, estoque: 8, pagina: 'rdr2' }
 ];
 
 // Função de compra
