@@ -242,12 +242,113 @@ text-align:center;
 border-top:1px solid #ff00ff44;
 
 }
+.buy-area{
+
+display:flex;
+align-items:center;
+gap:25px;
+margin-top:30px;
+flex-wrap:wrap;
+
+}
+
+
+.quantity{
+
+display:flex;
+align-items:center;
+
+height:60px;
+
+background:#160028;
+
+border:2px solid #ff00ff;
+
+border-radius:50px;
+
+overflow:hidden;
+
+box-shadow:
+
+0 0 15px #ff00ff,
+0 0 35px cyan;
+
+}
+
+
+.quantity button{
+
+width:60px;
+height:60px;
+
+border:none;
+
+background:transparent;
+
+color:#00ffff;
+
+font-family:'Orbitron',sans-serif;
+
+font-size:32px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+
+.quantity button:hover{
+
+background:#ff00ff55;
+
+color:white;
+
+transform:scale(1.15);
+
+}
+
+
+
+.quantity span{
+
+
+width:70px;
+
+text-align:center;
+
+font-family:'Orbitron',sans-serif;
+
+font-size:25px;
+
+font-weight:bold;
+
+color:white;
+
+text-shadow:
+
+0 0 10px cyan;
+
+
+}
+
+
+.topbar{display:flex;justify-content:space-between;align-items:center;background:#140022;border-bottom:2px solid #00ffff;padding:12px 8%;font-family:Orbitron;box-shadow:0 0 15px #00ffff55;}
+.userbox,.balance{color:#fff}.balance{color:#00ffff;font-weight:bold}
 
 </style>
 
 </head>
 
 <body>
+
+<div class="topbar">
+<div class="userbox">👤 Usuário</div>
+<div class="balance">Saldo: R$ 0</div>
+</div>
+
 
 <div class="grid"></div>
 <div class="sun"></div>
@@ -274,10 +375,7 @@ BIG TOPS GAMES
 
 <p>
 
-Embarque na maior aventura do empresário mais famoso dos videogames.
-Viaje por cidades malucas, derrote inimigos, pague boletos gigantes,
-colecione moedas e descubra segredos escondidos em um mundo totalmente
-inspirado nos clássicos dos anos 90.
+
 
 </p>
 
@@ -296,22 +394,44 @@ inspirado nos clássicos dos anos 90.
 <h2>Descrição</h2>
 
 <p>
-
+Embarque na maior aventura do empresário mais famoso dos videogames.
+Viaje por cidades malucas, derrote inimigos, pague boletos gigantes,
+colecione moedas e descubra segredos escondidos em um mundo totalmente
+inspirado nos clássicos dos anos 90.
 
 </p>
 
 <div class="price">
 
-R$ 19,90
+R$ 19,67
 
 </div>
 
-<a href="#" class="btn">
+<div class="buy-area">
 
-Confirmar Aluguel
+    <a href="#" class="btn">
+        Comprar
+    </a>
 
-</a>
 
+    <div class="quantity">
+
+        <button onclick="alterarQuantidade(-1)">
+            −
+        </button>
+
+        <span id="quantidade">
+            1
+        </span>
+
+        <button onclick="alterarQuantidade(1)">
+            +
+        </button>
+
+    </div>
+
+
+</div>
 </div>
 
 </div>
@@ -337,6 +457,18 @@ Confirmar Aluguel
 © 2026 BIG TOPS GAMES
 
 </footer>
+<script>
+var quantidade = 1;
+
+function alterarQuantidade(valor) {
+    quantidade += valor;
+    if (quantidade < 1) {
+        quantidade = 1;
+    }
+    document.getElementById('quantidade').textContent = quantidade;
+}
+
+</script>
 
 </body>
 </html>

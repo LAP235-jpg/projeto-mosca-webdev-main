@@ -242,12 +242,112 @@ text-align:center;
 border-top:1px solid #ff00ff44;
 
 }
+.buy-area{
+
+display:flex;
+align-items:center;
+gap:25px;
+margin-top:30px;
+flex-wrap:wrap;
+
+}
+
+
+.quantity{
+
+display:flex;
+align-items:center;
+
+height:60px;
+
+background:#160028;
+
+border:2px solid #ff00ff;
+
+border-radius:50px;
+
+overflow:hidden;
+
+box-shadow:
+
+0 0 15px #ff00ff,
+0 0 35px cyan;
+
+}
+
+
+.quantity button{
+
+width:60px;
+height:60px;
+
+border:none;
+
+background:transparent;
+
+color:#00ffff;
+
+font-family:'Orbitron',sans-serif;
+
+font-size:32px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+
+.quantity button:hover{
+
+background:#ff00ff55;
+
+color:white;
+
+transform:scale(1.15);
+
+}
+
+
+
+.quantity span{
+
+
+width:70px;
+
+text-align:center;
+
+font-family:'Orbitron',sans-serif;
+
+font-size:25px;
+
+font-weight:bold;
+
+color:white;
+
+text-shadow:
+
+0 0 10px cyan;
+
+
+}
+
+.topbar{display:flex;justify-content:space-between;align-items:center;background:#140022;border-bottom:2px solid #00ffff;padding:12px 8%;font-family:Orbitron;box-shadow:0 0 15px #00ffff55;}
+.userbox,.balance{color:#fff}.balance{color:#00ffff;font-weight:bold}
 
 </style>
 
 </head>
 
 <body>
+
+<div class="topbar">
+<div class="userbox">👤 Usuário</div>
+<div class="balance">Saldo: R$ 0</div>
+</div>
+
 
 <div class="grid"></div>
 <div class="sun"></div>
@@ -274,10 +374,7 @@ BIG TOPS GAMES
 
 <p>
 
-O FIFA 23 é o jogo de simulação de futebol definitivo da EA Sports.
-Ele traz a tecnologia HyperMotion2 para maior realismo de movimentos,
-inclui os torneios da Copa do Mundo masculina e feminina, e apresenta 
-o FIFA Ultimate Team, além do Modo Carreira.
+
 
 </p>
 
@@ -296,7 +393,10 @@ o FIFA Ultimate Team, além do Modo Carreira.
 <h2>Descrição</h2>
 
 <p>
-
+O FIFA 23 é o jogo de simulação de futebol definitivo da EA Sports.
+Ele traz a tecnologia HyperMotion2 para maior realismo de movimentos,
+inclui os torneios da Copa do Mundo masculina e feminina, e apresenta 
+o FIFA Ultimate Team, além do Modo Carreira.
 </p>
 
 <div class="price">
@@ -305,11 +405,31 @@ R$ 180,90
 
 </div>
 
-<a href="#" class="btn">
+<div class="buy-area">
 
-Comprar
-</a>
+    <a href="#" class="btn">
+        Comprar
+    </a>
 
+
+    <div class="quantity">
+
+        <button onclick="alterarQuantidade(-1)">
+            −
+        </button>
+
+        <span id="quantidade">
+            1
+        </span>
+
+        <button onclick="alterarQuantidade(1)">
+            +
+        </button>
+
+    </div>
+
+
+</div>
 </div>
 
 </div>
@@ -335,6 +455,18 @@ Comprar
 © 2026 BIG TOPS GAMES
 
 </footer>
+<script>
+var quantidade = 1;
+
+function alterarQuantidade(valor) {
+    quantidade += valor;
+    if (quantidade < 1) {
+        quantidade = 1;
+    }
+    document.getElementById('quantidade').textContent = quantidade;
+}
+
+</script>
 
 </body>
 </html>
