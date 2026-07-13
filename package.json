@@ -1,0 +1,24 @@
+{
+  "name": "projeto-mosca-webdev",
+  "version": "1.0.0",
+  "description": "> **Projeto desenvolvido para a disciplina de Web Development.**",
+  "main": "backend.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marquem146/projeto-mosca-webdev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/marquem146/projeto-mosca-webdev/issues"
+  },
+  "homepage": "https://github.com/marquem146/projeto-mosca-webdev#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

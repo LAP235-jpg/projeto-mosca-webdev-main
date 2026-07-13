@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BIG TOPS GAMES</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Rajdhani',sans-serif;
+    background:#090015;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Fundo Retrowave */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top,#ff00ff55,transparent 50%),
+    linear-gradient(#120028,#05000d);
+    z-index:-3;
+}
+
+.grid{
+    position:fixed;
+    width:200%;
+    height:120%;
+    left:-50%;
+    bottom:-40%;
+    background:
+    linear-gradient(#ff00ff55 2px,transparent 2px),
+    linear-gradient(90deg,#ff00ff55 2px,transparent 2px);
+    background-size:60px 60px;
+    transform:perspective(700px) rotateX(80deg);
+    animation:gridMove 12s linear infinite;
+    z-index:-2;
+}
+
+@keyframes gridMove{
+    from{transform:perspective(700px) rotateX(80deg) translateY(0);}
+    to{transform:perspective(700px) rotateX(80deg) translateY(60px);}
+}
+
+.sun{
+    position:fixed;
+    top:80px;
+    left:50%;
+    transform:translateX(-50%);
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    background:linear-gradient(#ffdd55,#ff00aa);
+    box-shadow:0 0 80px #ff00ff;
+    z-index:-1;
+}
+
+.sun::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:
+    repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 12px,
+    rgba(0,0,0,.4) 13px,
+    rgba(0,0,0,.4) 16px
+    );
+    border-radius:50%;
+}
+
+header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+}
+
+.logo{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 38px;
+    font-family: 'Orbitron';
+    font-weight: 900;
+    color: #00ffff;
+    text-shadow:
+        0 0 10px #00ffff,
+        0 0 25px #00ffff;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    transition:.3s;
+    font-size:20px;
+}
+
+nav a:hover{
+    color:#00ffff;
+    text-shadow:0 0 10px cyan;
+}
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:100px 8%;
+    gap:40px;
+}
+
+.hero-text{
+    max-width:600px;
+}
+
+.hero h1{
+    font-size:72px;
+    line-height:1.1;
+    font-family:'Orbitron';
+    color:#fff;
+    text-shadow:
+    0 0 8px #fff,
+    0 0 18px #ff00ff,
+    0 0 35px #00ffff;
+}
+
+.hero p{
+    margin-top:25px;
+    font-size:24px;
+    color:#ddd;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:16px 38px;
+    text-decoration:none;
+    color:rgb(255, 255, 255);
+    border:2px solid #00ffff;
+    border-radius:50px;
+    font-size:22px;
+    transition:.3s;
+    box-shadow:0 0 20px #00ffff66;
+position:relative;
+left:20%;
+}
+
+.btn:hover{
+    background:#00ffff;
+    color:#1111114e;
+    transform:scale(1.05);
+}
+
+.hero-image img{
+    width:520px;
+    border-radius:20px;
+    border:3px solid #ff00ff;
+    box-shadow:
+    0 0 25px #ff00ff,
+    0 0 60px #00ffff55;
+}
+
+section{
+    padding:60px 8%;
+}
+
+h2{
+    font-family:'Orbitron';
+    margin-bottom:30px;
+    color:#00ffff;
+    font-size:40px;
+}
+
+.games{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#130029cc;
+    border:1px solid #ff00ff55;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:
+    0 0 20px #ff00ff,
+    0 0 40px #00ffff55;
+}
+
+.card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card h3{
+    color:#00ffff;
+    margin-bottom:10px;
+    font-size:26px;
+    
+}
+
+.price{
+    color:#ff66ff;
+    font-size:22px;
+    margin-top:10px;
+}
+
+footer{
+    margin-top:60px;
+    padding:30px;
+    text-align:center;
+    border-top:1px solid #ff00ff44;
+    color:#ccc;
+}
+  
+</style>
+
+</head>
+<body>
+
+<div class="grid"></div>
+<div class="sun"></div>
+
+<header>
+
+<div class="logo">
+BIG TOPS GAMES
+</div>
+
+<nav>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>JOGUE O FUTURO.<br>REVIVA OS ANOS 80.</h1>
+
+<p>
+A BIG TOPS GAMES é sua locadora digital de jogos inspirada no melhor estilo retrô.
+Alugue, descubra e jogue centenas de títulos em uma experiência neon inspirada na estética Synthwave.
+</p>
+
+
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800" alt="Gaming">
+
+</div>
+
+</section>
+
+<section>
+<div class="destaques">
+<h2>Destaques</h2>
+
+<div class="games">
+
+<div class="card">
+<img src="https://i.ytimg.com/vi/HT2fpLqUnqw/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&amp;rs=AOn4CLCNOOXimxsKzlNT5HB1iunwvjjahA">
+<a href="jogosweb/gael.html" class="btn">Comprar</a>
+<div class="card-content">
+<h3>Gael Ultra Adventures 2</h3>
+<p>Controle o maior empresario da história e pegue todos os boletos.</p>
+<div class="price">Comprar • R$ 19,67</div>
+</div>
+</div>
+
+<div class="card">
+<img src="images/fifa23.webp">
+<a href="jogosweb/fifa23.html" class="btn">Comprar</a>
+<div class="card-content">
+<h3>FIFA 23</h3>
+<p>Faça o que o Brasil não fez em 24 anos, pegue o HEXA.</p>
+<div class="price">Comprar • R$ 180,90</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDqmGXJgm2K8-Y5yPl7sul1VOiS9hxmn89GXKU89EqKw&s=10">
+<a href="jogosweb/animalcrossing.html" class="btn">Comprar</a>
+<div class="card-content">
+<h3>Animal Crossing</h3>
+<p>faça parte da pequena comunidade, melhore-a, interagindo com seus vizinhos e expandindo sua casa .</p>
+<div class="price">Comprar • R$ 240,00</div>
+</div>
+</div>
+
+<div class="card">
+<img src="images/rd2.png">
+<a href="jogosweb/rd2.html" class="btn">Comprar</a>
+<div class="card-content">
+<h3>Red Dead Redemption 2</h3>
+<p>Controle Arthur Morgan e explore a história do velho oeste em busca de sua redenção.</p>
+<div class="price">Comprar • R$ 210,90</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<footer>
+
+© 2026 BIG TOPS GAMES • O universo retrô começa aqui.
+
+</footer>
+ <script src="servidor.js"></script>
+</body>
+</html>
