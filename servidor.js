@@ -33,11 +33,10 @@ function comprarJogo(nome, preco, quantidade) {
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, 'home.html'));
 });
-çk
 // Rota: Páginas dos jogos
 app.get("/jogos/:nome", (req, res) => {
   const nomeJogo = req.params.nome;
-  res.sendFile(path.join(__dirname, "jogos", `${nomeJogo}.html`));
+  res.sendFile(path.join(__dirname, "jogos", `${nomeJogo}`));
 });
 
 // API: Comprar jogo
