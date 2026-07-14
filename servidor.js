@@ -10,7 +10,7 @@ app.use(express.json());
 let saldo = 100;
 const jogos = [
   { id: 1, nome: 'GUA2', preco: 19.67, estoque: 10, pagina: 'gua2' },
-  { id: 2, nome: 'FIFA23', preco: 180.90, estoque: 5, pagina: 'fifa23' },
+  { id: 2, nome: 'fifa23', preco: 180.90, estoque: 5, pagina: 'fifa23' },
   { id: 3, nome: 'Animal Crossing', preco: 240.00, estoque: 3, pagina: 'animal-crossing' },
   { id: 4, nome: 'RDR2', preco: 210.90, estoque: 8, pagina: 'rdr2' }
 ];
@@ -33,11 +33,11 @@ function comprarJogo(nome, preco, quantidade) {
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, 'home.html'));
 });
-
+çk
 // Rota: Páginas dos jogos
-app.get("/jogo/:nome", (req, res) => {
+app.get("/jogos/:nome", (req, res) => {
   const nomeJogo = req.params.nome;
-  res.sendFile(path.join(__dirname, `${nomeJogo}.html`));
+  res.sendFile(path.join(__dirname, "jogos", `${nomeJogo}.html`));
 });
 
 // API: Comprar jogo
